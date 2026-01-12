@@ -1,0 +1,455 @@
+{
+  "designSystem": {
+    "name": "Clarity Design System",
+    "version": "1.0.0",
+    "description": "A modern, clean design system for mental health and therapy applications",
+    "designPrinciples": [
+      "Clean and minimal - prioritize whitespace and clarity over visual noise",
+      "Professional yet approachable - maintain a trustworthy healthcare aesthetic while feeling warm and accessible",
+      "Hierarchical information architecture - use visual weight, spacing, and typography to guide user attention",
+      "Consistent component patterns - reusable UI elements that maintain visual consistency across the application",
+      "Accessible by default - ensure sufficient contrast, readable fonts, and clear interactive states",
+      "Gradient accents for depth - use subtle gradients to add visual interest without overwhelming content"
+    ],
+    "colorPalette": {
+      "primary": {
+        "main": "#CC471D",
+        "description": "Primary brand color - use for primary actions, highlights, and key interactive elements",
+        "usage": ["Primary buttons", "Active states", "Important highlights", "Brand accents"]
+      },
+      "background": {
+        "dark": {
+          "value": "#1a0d2e",
+          "description": "Main dark purple background for the application shell",
+          "usage": ["Main application background", "Sidebar backgrounds"]
+        },
+        "light": {
+          "value": "#ffffff",
+          "description": "Pure white for card backgrounds and content areas",
+          "usage": ["Card backgrounds", "Content areas", "Modal backgrounds"]
+        }
+      },
+      "accent": {
+        "blue": {
+          "value": "#4a90e2",
+          "description": "Light blue accent for secondary actions and highlights",
+          "usage": ["Secondary buttons", "Links", "Active navigation items", "Notification badges"]
+        },
+        "purple": {
+          "value": "#7b68ee",
+          "description": "Purple accent for gradients and special elements",
+          "usage": ["Gradient backgrounds", "Special cards", "Upgrade prompts"]
+        },
+        "gradient": {
+          "from": "#4a90e2",
+          "to": "#7b68ee",
+          "description": "Blue to purple gradient for premium features and special sections",
+          "usage": ["Upgrade cards", "Feature highlights", "Special call-to-action sections"]
+        }
+      },
+      "text": {
+        "primary": {
+          "value": "#171717",
+          "description": "Primary text color for main content on light backgrounds",
+          "usage": ["Headings", "Body text on white/light backgrounds", "Card content"]
+        },
+        "secondary": {
+          "value": "#6b7280",
+          "description": "Secondary text for less important information",
+          "usage": ["Metadata", "Timestamps", "Secondary labels", "Helper text"]
+        },
+        "inverse": {
+          "value": "#ffffff",
+          "description": "White text for dark backgrounds",
+          "usage": ["Text on dark backgrounds", "Sidebar navigation text", "Dark card text"]
+        }
+      },
+      "status": {
+        "success": "#10b981",
+        "warning": "#f59e0b",
+        "error": "#ef4444",
+        "info": "#3b82f6"
+      },
+      "tags": {
+        "depression": "#e0e7ff",
+        "anxiety": "#fce7f3",
+        "bipolar": "#fef3c7",
+        "panic": "#fee2e2",
+        "phobia": "#e0f2fe",
+        "default": "#f3f4f6"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+        "description": "Modern, clean sans-serif for all UI text",
+        "usage": ["All body text", "Headings", "Navigation", "Buttons"]
+      },
+      "fontSizes": {
+        "xs": {
+          "value": "0.75rem",
+          "lineHeight": "1rem",
+          "usage": ["Tags", "Badges", "Small labels", "Metadata"]
+        },
+        "sm": {
+          "value": "0.875rem",
+          "lineHeight": "1.25rem",
+          "usage": ["Secondary text", "Helper text", "Chat timestamps"]
+        },
+        "base": {
+          "value": "1rem",
+          "lineHeight": "1.5rem",
+          "usage": ["Body text", "Default text size", "Card content"]
+        },
+        "lg": {
+          "value": "1.125rem",
+          "lineHeight": "1.75rem",
+          "usage": ["Subheadings", "Emphasized body text"]
+        },
+        "xl": {
+          "value": "1.25rem",
+          "lineHeight": "1.75rem",
+          "usage": ["Section headings", "Card titles"]
+        },
+        "2xl": {
+          "value": "1.5rem",
+          "lineHeight": "2rem",
+          "usage": ["Page titles", "Major headings"]
+        },
+        "3xl": {
+          "value": "1.875rem",
+          "lineHeight": "2.25rem",
+          "usage": ["Hero headings", "Large page titles"]
+        }
+      },
+      "fontWeights": {
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    },
+    "spacing": {
+      "scale": "4px base unit",
+      "values": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "2xl": "48px",
+        "3xl": "64px"
+      },
+      "guidelines": {
+        "cardPadding": "24px",
+        "sectionSpacing": "32px",
+        "componentGap": "16px",
+        "elementGap": "8px",
+        "sidebarWidth": "280px",
+        "rightSidebarWidth": "360px"
+      }
+    },
+    "layout": {
+      "structure": {
+        "type": "Three-column layout",
+        "columns": [
+          {
+            "name": "Left Sidebar",
+            "width": "280px",
+            "purpose": "Primary navigation and app structure",
+            "background": "dark",
+            "fixed": true
+          },
+          {
+            "name": "Main Content",
+            "width": "flexible",
+            "purpose": "Primary content area with dashboard, lists, and main interactions",
+            "background": "light",
+            "padding": "32px"
+          },
+          {
+            "name": "Right Sidebar",
+            "width": "360px",
+            "purpose": "Contextual information, patient profiles, and chat interfaces",
+            "background": "light",
+            "collapsible": true
+          }
+        ]
+      },
+      "breakpoints": {
+        "mobile": "640px",
+        "tablet": "768px",
+        "desktop": "1024px",
+        "wide": "1280px"
+      }
+    },
+    "components": {
+      "card": {
+        "description": "Primary container for content sections",
+        "styles": {
+          "background": "white",
+          "borderRadius": "12px",
+          "padding": "24px",
+          "boxShadow": "0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06)",
+          "border": "none"
+        },
+        "variants": {
+          "default": "White background with subtle shadow",
+          "elevated": "Stronger shadow for emphasis",
+          "gradient": "Gradient background (blue to purple) for special cards"
+        }
+      },
+      "button": {
+        "description": "Interactive action elements",
+        "styles": {
+          "primary": {
+            "background": "#CC471D",
+            "color": "white",
+            "borderRadius": "8px",
+            "padding": "12px 24px",
+            "fontWeight": 500,
+            "hover": "Slightly darker shade of primary color"
+          },
+          "secondary": {
+            "background": "transparent",
+            "color": "#4a90e2",
+            "border": "1px solid #4a90e2",
+            "borderRadius": "8px",
+            "padding": "12px 24px",
+            "fontWeight": 500
+          },
+          "ghost": {
+            "background": "transparent",
+            "color": "inherit",
+            "border": "none",
+            "padding": "8px 16px"
+          }
+        }
+      },
+      "badge": {
+        "description": "Small status indicators and tags",
+        "styles": {
+          "background": "Light colored backgrounds matching tag categories",
+          "color": "Dark text for contrast",
+          "borderRadius": "6px",
+          "padding": "4px 12px",
+          "fontSize": "0.75rem",
+          "fontWeight": 500
+        },
+        "variants": {
+          "notification": "Circular badge with number, typically blue background",
+          "tag": "Rounded pill shape with category-specific colors"
+        }
+      },
+      "progressBar": {
+        "description": "Visual progress indicators",
+        "styles": {
+          "container": {
+            "background": "#f3f4f6",
+            "height": "8px",
+            "borderRadius": "4px",
+            "overflow": "hidden"
+          },
+          "fill": {
+            "background": "Linear gradient or solid color matching primary/accent",
+            "height": "100%",
+            "borderRadius": "4px",
+            "transition": "width 0.3s ease"
+          }
+        }
+      },
+      "timeline": {
+        "description": "Horizontal time-based visualization",
+        "styles": {
+          "background": "Light gray or white",
+          "height": "auto",
+          "timeMarkers": {
+            "color": "#6b7280",
+            "fontSize": "0.875rem",
+            "spacing": "Evenly distributed"
+          },
+          "eventCards": {
+            "position": "Absolute overlay on timeline",
+            "background": "White card",
+            "border": "1px solid #e5e7eb",
+            "borderRadius": "8px"
+          }
+        }
+      },
+      "avatar": {
+        "description": "User profile images",
+        "styles": {
+          "shape": "Circle",
+          "sizes": {
+            "sm": "32px",
+            "md": "48px",
+            "lg": "64px",
+            "xl": "96px"
+          },
+          "border": "2px solid white",
+          "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)"
+        },
+        "group": {
+          "overlap": "-8px",
+          "maxVisible": "4-5 avatars before showing count badge"
+        }
+      },
+      "chatBubble": {
+        "description": "Message containers in chat interface",
+        "styles": {
+          "user": {
+            "background": "#f3f4f6",
+            "color": "#171717",
+            "borderRadius": "12px 12px 12px 4px",
+            "padding": "12px 16px",
+            "align": "left"
+          },
+          "other": {
+            "background": "#4a90e2",
+            "color": "white",
+            "borderRadius": "12px 12px 4px 12px",
+            "padding": "12px 16px",
+            "align": "right"
+          },
+          "timestamp": {
+            "color": "#6b7280",
+            "fontSize": "0.75rem",
+            "marginTop": "4px"
+          }
+        }
+      },
+      "input": {
+        "description": "Form input fields",
+        "styles": {
+          "background": "white",
+          "border": "1px solid #e5e7eb",
+          "borderRadius": "8px",
+          "padding": "12px 16px",
+          "focus": {
+            "borderColor": "#CC471D",
+            "outline": "none",
+            "boxShadow": "0 0 0 3px rgba(204, 71, 29, 0.1)"
+          }
+        }
+      },
+      "navigation": {
+        "description": "Sidebar navigation items",
+        "styles": {
+          "item": {
+            "padding": "12px 16px",
+            "borderRadius": "8px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "fontWeight": 500,
+            "transition": "all 0.2s ease"
+          },
+          "active": {
+            "background": "#4a90e2",
+            "color": "white"
+          },
+          "hover": {
+            "background": "rgba(255, 255, 255, 0.1)",
+            "color": "white"
+          }
+        }
+      },
+      "section": {
+        "description": "Content sections with headers",
+        "styles": {
+          "header": {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "center",
+            "marginBottom": "24px"
+          },
+          "title": {
+            "fontSize": "1.25rem",
+            "fontWeight": 600,
+            "color": "#171717"
+          },
+          "action": {
+            "color": "#4a90e2",
+            "fontSize": "0.875rem",
+            "fontWeight": 500,
+            "cursor": "pointer"
+          }
+        }
+      }
+    },
+    "effects": {
+      "shadows": {
+        "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+        "md": "0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06)",
+        "lg": "0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06)",
+        "xl": "0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05)"
+      },
+      "borderRadius": {
+        "sm": "4px",
+        "md": "8px",
+        "lg": "12px",
+        "full": "9999px"
+      },
+      "transitions": {
+        "default": "0.2s ease",
+        "slow": "0.3s ease",
+        "fast": "0.15s ease"
+      },
+      "gradients": {
+        "primary": "Linear gradient from #4a90e2 to #7b68ee",
+        "usage": ["Upgrade cards", "Special feature highlights", "Premium sections"]
+      }
+    },
+    "patterns": {
+      "patientCard": {
+        "description": "Card displaying patient information with schedule and progress",
+        "structure": [
+          "Patient name (bold, large)",
+          "Time range (secondary text)",
+          "Tags/badges for conditions",
+          "Progress bar with percentage",
+          "Status indicators (if session active)"
+        ],
+        "layout": "Vertical stack with clear visual hierarchy"
+      },
+      "familyTherapyCard": {
+        "description": "Card for group therapy sessions",
+        "structure": [
+          "Family name (bold)",
+          "Condition tags",
+          "Avatar group with overlap",
+          "Next session date and time"
+        ]
+      },
+      "articleCard": {
+        "description": "Article list item",
+        "structure": [
+          "Article title",
+          "Author name",
+          "Progress indicator (e.g., '4/8')",
+          "Circular arrow icon for action"
+        ]
+      }
+    },
+    "accessibility": {
+      "contrast": {
+        "minimum": "WCAG AA compliant",
+        "textOnBackground": "At least 4.5:1 for normal text, 3:1 for large text"
+      },
+      "interactive": {
+        "minTouchTarget": "44x44px",
+        "focusStates": "Visible outline with primary color",
+        "hoverStates": "Clear visual feedback on all interactive elements"
+      }
+    },
+    "usageGuidelines": {
+      "spacing": "Use consistent spacing scale throughout - maintain generous whitespace for breathing room",
+      "colors": "Primary color (#CC471D) should be used sparingly for maximum impact - reserve for primary actions and key highlights",
+      "typography": "Maintain clear hierarchy - use font size and weight to establish information priority",
+      "cards": "Cards should have consistent padding (24px) and subtle shadows to create depth without overwhelming",
+      "navigation": "Active states should be clearly visible with blue background - maintain consistent hover states",
+      "gradients": "Use gradients sparingly - primarily for special features, upgrades, and premium sections",
+      "tags": "Use color-coded tags for quick visual categorization - maintain consistent tag styling across the app",
+      "layout": "Three-column structure should be responsive - sidebars collapse on smaller screens, main content remains primary focus"
+    }
+  }
+}
+
